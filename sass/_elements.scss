@@ -3,6 +3,7 @@
 --------------------------------------------------------------*/
 
 html {
+  background-color: $color__background-main;
   box-sizing: border-box;
   font-size: 1rem;
 }
@@ -29,7 +30,6 @@ q {
 }
 
 hr {
-  // background-color: $color__background-hr;
   border: 0;
   height: 1px;
   margin-bottom: $base__space-unit;
