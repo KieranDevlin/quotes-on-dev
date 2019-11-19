@@ -69,7 +69,10 @@ function qod_scripts()
 
 	//localized script to access DB with JS
 	wp_localize_script('qod-script', 'qod_vars', array(
+		'rest_url' => esc_url_raw(rest_url()),
 		'nonce' => wp_create_nonce('wp_rest'),
+		'post_id' => get_the_ID(),
+		'user_id' => get_current_user_id(),
 		'success' => 'Thanks, your submission was received!',
 		'failure' => 'Your submission could not be processed.',
 	));
