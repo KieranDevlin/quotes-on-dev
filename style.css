@@ -731,6 +731,9 @@ object {
       padding-left: 0.75rem; } }
 
 /* About Page */
+.about .site-main p {
+  font-size: 16px; }
+
 /* Page Archive */
 .page-archive {
   max-width: 100%; }
