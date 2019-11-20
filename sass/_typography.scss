@@ -46,7 +46,7 @@ h6 {
 /* Copy */
 
 p {
-  margin-bottom: $base__space-unit;
+  margin: 0;
 }
 
 dfn,
@@ -101,7 +101,17 @@ big {
 
 /* My Code */
 
-.entry-title {
-  font-size: $base__space-unit * 0.75;
+h1 {
+  font-size: $base__space-unit * (1+ (1/3));
+  font-weight: normal;
+}
+h2 {
+  font-size: $base__space-unit;
   font-weight: 300;
+}
+
+.entry-content {
+  p {
+    margin: $base__space-unit 0 $base__space-unit * 1.5;
+  }
 }

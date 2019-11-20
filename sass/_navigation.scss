@@ -33,7 +33,7 @@ a {
 
 .main-navigation {
   clear: both;
-  display: block;
+  display: flex;
 
   ul {
     display: flex;
@@ -43,7 +43,6 @@ a {
   }
   li {
     display: flex;
-    padding-right: $base__space-unit;
   }
 }
 

@@ -27,12 +27,13 @@
       display: block;
       &:before,
       &:after {
+        color: $color__green_brand;
         position: absolute;
         top: 0;
         font-size: 8rem;
         font-family: 'FontAwesome';
         font-weight: 900;
-        color: $color__green_brand;
+        line-height: 1;
       }
       &:after {
         right: -150px;
@@ -44,31 +45,29 @@
       }
     }
 
-    .site-main {
+    .front-page {
       display: block;
+
       .entry-content {
         font-size: $base__space-unit * 1.5;
         font-weight: 300;
       }
+
       .entry-meta {
         display: flex;
         align-items: center;
         font-weight: 300;
+        .entry-title {
+          font-size: $base__space-unit * 0.85;
+        }
         .source {
-          font-size: $base__space-unit * 0.75;
-
+          font-size: $base__space-unit * 0.85;
           font-style: italic;
           a {
             color: $color__green_brand;
           }
         }
       }
-    }
-  }
-
-  .site-footer {
-    @include media($desktop) {
-      text-align: right;
     }
   }
 }
@@ -105,6 +104,69 @@
 
 /* Footer */
 
-footer {
+.site-footer {
   padding: $base__space-unit * 2 0 $base__space-unit;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  @include media($tablet) {
+    flex-direction: row;
+    align-items: center;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    li {
+      &:first-child {
+        a {
+          padding: 0 $base__space-unit * 0.5 0 0;
+        }
+      }
+      a {
+        padding: 0 $base__space-unit * 0.5;
+      }
+      &:after {
+        content: ' 	\007C';
+      }
+      &:last-child {
+        &:after {
+          content: '';
+        }
+        @include media($tablet) {
+          &:after {
+            content: ' 	\007C';
+          }
+        }
+      }
+    }
+  }
+  @include media($desktop) {
+    text-align: right;
+    justify-content: flex-end;
+  }
+  .site-info {
+    @include media($tablet) {
+      padding-left: $base__space-unit * 0.5;
+    }
+  }
+}
+
+/* About Page */
+
+/* Page Archive */
+
+.page-archive {
+  max-width: 100%;
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  li {
+    list-style: none;
+    font-size: $base__space-unit * 0.75;
+    margin: 0 $base__space-unit * 0.75 $base__space-unit * 0.75 0;
+  }
 }
