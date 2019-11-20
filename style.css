@@ -241,22 +241,22 @@ h6 {
   clear: both; }
 
 h1 {
-  font-size: 40px; }
-
-h2 {
-  font-size: 36px; }
-
-h3 {
-  font-size: 32px; }
-
-h4 {
   font-size: 28px; }
 
-h5 {
+h2 {
+  font-size: 26px; }
+
+h3 {
   font-size: 24px; }
 
-h6 {
+h4 {
+  font-size: 22px; }
+
+h5 {
   font-size: 20px; }
+
+h6 {
+  font-size: 18px; }
 
 /* Copy */
 p {
@@ -425,6 +425,7 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
+  text-decoration: none;
   color: #00cc00; }
   a:visited {
     color: #004d00; }
@@ -438,39 +439,19 @@ a {
 /* Menus */
 .main-navigation {
   clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
+  display: block; }
   .main-navigation ul {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     list-style: none;
     margin: 0;
     padding-left: 0; }
-    .main-navigation ul ul {
-      -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-              box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 1.5rem;
-      left: -999rem;
-      z-index: 99999; }
-      .main-navigation ul ul ul {
-        left: -999rem;
-        top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
-        left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
-      left: auto; }
   .main-navigation li {
-    float: left;
-    position: relative; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-right: 1.5rem; }
 
 /* Small menu. */
 .menu-toggle,
@@ -605,5 +586,30 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+/* Site Layout */
+.site {
+  padding: 1.5rem; }
+  @media only screen and (min-width: 620px) {
+    .site {
+      padding: 3rem; } }
+  @media only screen and (min-width: 1080px) {
+    .site {
+      max-width: 1080px;
+      margin: 0 auto; } }
+
+/* Header */
+.site-header img {
+  max-width: 300px; }
+  @media only screen and (min-width: 620px) {
+    .site-header img {
+      max-width: 500px; } }
+  @media only screen and (min-width: 1080px) {
+    .site-header img {
+      max-width: 700px;
+      margin: 0 auto; } }
+
 /* All Archives Page */
 /* Submit a Quote Page */
+/* Footer */
+footer {
+  padding: 3rem 0 1.5rem; }

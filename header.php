@@ -29,7 +29,7 @@
 		<header id="masthead" class="site-header" role="banner">
 			<div class="site-branding">
 				<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-				<a href="<?= get_home_url(); ?>"><img src=" <?= get_stylesheet_directory_uri(); ?>/images/logos/qod-logo.svg" alt=""></a>
+				<a href="<?= get_home_url(); ?>"><img class="logo" src=" <?= get_stylesheet_directory_uri(); ?>/images/logos/qod-logo.svg" alt=""></a>
 			</div><!-- .site-branding -->
 
 

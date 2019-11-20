@@ -2,6 +2,44 @@
 # Page Templates
 --------------------------------------------------------------*/
 
+/* Site Layout */
+
+.site {
+  padding: $base__space-unit;
+
+  @include media($tablet) {
+    padding: $base__space-unit * 2;
+  }
+
+  @include media($desktop) {
+    max-width: $desktop;
+    margin: 0 auto;
+  }
+}
+
+/* Header */
+
+.site-header {
+  img {
+    max-width: 300px;
+
+    @include media($tablet) {
+      max-width: 500px;
+    }
+
+    @include media($desktop) {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  }
+}
+
 /* All Archives Page */
 
 /* Submit a Quote Page */
+
+/* Footer */
+
+footer {
+  padding: $base__space-unit * 2 0 $base__space-unit;
+}
