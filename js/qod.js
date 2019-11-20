@@ -12,7 +12,6 @@
         '/wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1'
     })
       .done(function(data) {
-        console.log(data[0]);
         $('.entry-content').html(data[0].content.rendered);
         $('.entry-title').html(data[0].title.rendered);
         if (data[0]._qod_quote_source !== undefined) {
@@ -23,7 +22,7 @@
         // append the quote to the DOM
       })
       .fail(function(error) {
-        console.log('an error has occurred', error);
+        alert('an error has occurred', error);
       });
   });
   // 2. post a new quote using the post method
