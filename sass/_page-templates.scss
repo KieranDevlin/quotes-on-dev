@@ -45,7 +45,7 @@
       }
     }
 
-    .front-page {
+    .site-main {
       display: block;
 
       .entry-content {
@@ -168,5 +168,22 @@
     list-style: none;
     font-size: $base__space-unit * 0.75;
     margin: 0 $base__space-unit * 0.75 $base__space-unit * 0.75 0;
+  }
+}
+
+/* Submit Quote */
+
+.quote-submission-form {
+  div {
+    display: flex;
+    flex-direction: column;
+    margin: $base__space-unit 0;
+    input {
+      margin: $base__space-unit * 0.5 0;
+      width: 60%;
+    }
+    textarea {
+      margin: $base__space-unit * 0.5 0;
+    }
   }
 }

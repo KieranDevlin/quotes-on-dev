@@ -17,16 +17,18 @@
           const qodData = data.shift();
 
           $('.entry-content').html(qodData.content.rendered);
-          $('.entry-title').html(`&mdash; ${qodData.title.rendered} &#32;`);
+          $('.entry-title').html(`&mdash; ${qodData.title.rendered}  `);
           if (
             qodData._qod_quote_source.length &&
             qodData._qod_quote_source_url.length
           ) {
             $('.source').html(
-              `&#32;&#44;<a class="source-src" href="${qodData._qod_quote_source_url}"> &#32;${qodData._qod_quote_source}</a>`
+              `&nbsp; &#44;<a class="source-src" href="${qodData._qod_quote_source_url}"> &nbsp; ${qodData._qod_quote_source}</a>`
             );
           } else if (qodData._qod_quote_source.length) {
-            $('.source').html(` &#32;	&#44; &#32; ${qodData._qod_quote_source}`);
+            $('.source').html(
+              ` &nbsp; 	&#44; &nbsp;  ${qodData._qod_quote_source}`
+            );
           } else {
             $('.source').html('');
           }
@@ -38,6 +40,7 @@
         alert('an error has occurred', error);
       });
   });
+
   // 2. post a new quote using the post method
   // using a form to submit (.submit event)
   // data:

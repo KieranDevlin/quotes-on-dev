@@ -32,12 +32,13 @@ input[type='url'],
 input[type='password'],
 input[type='search'],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
+  color: $color__green_brand;
+  background-color: $color__background_main;
+  border: 2px solid $color__green_brand;
   border-radius: 3px;
 
   &:focus {
-    color: #111;
+    color: $color__text_main;
   }
 }
 
