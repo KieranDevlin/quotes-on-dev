@@ -98,3 +98,10 @@ ins {
 big {
   font-size: 125%;
 }
+
+/* My Code */
+
+.entry-title {
+  font-size: $base__space-unit * 0.75;
+  font-weight: 300;
+}

@@ -304,6 +304,11 @@ ins {
 big {
   font-size: 125%; }
 
+/* My Code */
+.entry-title {
+  font-size: 1.125rem;
+  font-weight: 300; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -319,6 +324,10 @@ html {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
+
+body {
+  background-color: #222222;
+  /* Fallback for when there is no custom background color defined. */ }
 
 blockquote,
 q {
@@ -372,13 +381,14 @@ button,
 input[type='button'],
 input[type='reset'],
 input[type='submit'] {
-  border: 1px solid #00cc00;
-  border-radius: 1.5px;
+  border: 2px solid #00cc00;
+  border-radius: 3px;
   background-color: #222222;
   color: #00cc00;
-  font-size: 0.75rem;
+  font-size: 18px;
+  font-weight: 700;
   line-height: 1;
-  padding: 0.6rem 1rem 0.4rem; }
+  padding: 1rem 2.5rem; }
   button:hover, button:active, button:focus,
   input[type='button']:hover,
   input[type='button']:active,
@@ -588,25 +598,75 @@ object {
 --------------------------------------------------------------*/
 /* Site Layout */
 .site {
-  padding: 1.5rem; }
+  padding: 1.5rem;
+  /* Front Page */ }
   @media only screen and (min-width: 620px) {
     .site {
-      padding: 3rem; } }
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 2.25rem; } }
   @media only screen and (min-width: 1080px) {
     .site {
       max-width: 1080px;
       margin: 0 auto; } }
+  @media only screen and (min-width: 1080px) {
+    .site .content-area {
+      position: relative;
+      margin: 5rem 8rem;
+      display: block; }
+      .site .content-area:before, .site .content-area:after {
+        position: absolute;
+        top: 0;
+        font-size: 8rem;
+        font-family: 'FontAwesome';
+        font-weight: 900;
+        color: #00cc00; }
+      .site .content-area:after {
+        right: -150px;
+        content: '\f10e'; }
+      .site .content-area:before {
+        left: -150px;
+        content: '\f10d'; } }
+  .site .content-area .site-main {
+    display: block; }
+    .site .content-area .site-main .entry-content {
+      font-size: 2.25rem;
+      font-weight: 300; }
+    .site .content-area .site-main .entry-meta {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-weight: 300; }
+      .site .content-area .site-main .entry-meta .source {
+        font-size: 1.125rem;
+        font-style: italic; }
+        .site .content-area .site-main .entry-meta .source a {
+          color: #00cc00; }
+  @media only screen and (min-width: 1080px) {
+    .site .site-footer {
+      text-align: right; } }
+
+@media only screen and (min-width: 1080px) {
+  .new-quote-button {
+    display: block;
+    margin: 0 auto; } }
 
 /* Header */
-.site-header img {
+@media only screen and (min-width: 1080px) {
+  .site-branding {
+    text-align: center; } }
+
+.site-branding .logo {
   max-width: 300px; }
   @media only screen and (min-width: 620px) {
-    .site-header img {
+    .site-branding .logo {
       max-width: 500px; } }
   @media only screen and (min-width: 1080px) {
-    .site-header img {
-      max-width: 700px;
-      margin: 0 auto; } }
+    .site-branding .logo {
+      min-width: 700px; } }
 
 /* All Archives Page */
 /* Submit a Quote Page */

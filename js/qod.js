@@ -11,16 +11,29 @@
         qod_vars.rest_url +
         '/wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1'
     })
-      .done(function(data) {
-        $('.entry-content').html(data[0].content.rendered);
-        $('.entry-title').html(data[0].title.rendered);
-        if (data[0]._qod_quote_source !== undefined) {
-          $('.source').html(data[0]._qod_quote_source);
-          $('.source-src').attr('src', data[0]._qod_quote_source_url);
+      .done(
+        function(data) {
+          //returns the first item of the array
+          const qodData = data.shift();
+
+          $('.entry-content').html(qodData.content.rendered);
+          $('.entry-title').html(`&mdash; ${qodData.title.rendered} &#32;`);
+          if (
+            qodData._qod_quote_source.length &&
+            qodData._qod_quote_source_url.length
+          ) {
+            $('.source').html(
+              `&#32;&#44;<a class="source-src" href="${qodData._qod_quote_source_url}"> &#32;${qodData._qod_quote_source}</a>`
+            );
+          } else if (qodData._qod_quote_source.length) {
+            $('.source').html(` &#32;	&#44; &#32; ${qodData._qod_quote_source}`);
+          } else {
+            $('.source').html('');
+          }
         }
 
         // append the quote to the DOM
-      })
+      )
       .fail(function(error) {
         alert('an error has occurred', error);
       });
