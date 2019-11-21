@@ -37,7 +37,9 @@ textarea {
   border: 2px solid $color__green_brand;
   border-radius: 3px;
 
-  &:focus {
+  &:focus,
+  &:active {
+    border-color: $color__text_main;
     color: $color__text_main;
   }
 }

@@ -198,3 +198,32 @@
     }
   }
 }
+
+/* 404 Page */
+
+.error404 {
+  .search-submit {
+    border: none;
+    font-family: 'FontAwesome';
+    padding: $base__space-unit * 0.3;
+    font-weight: 700;
+    line-height: 1;
+    &:after {
+      content: '\f002';
+    }
+  }
+}
+
+/* Search Page */
+
+.search-page {
+  .page-title {
+    padding-bottom: $base__space-unit;
+    border-bottom: 1px dotted $color__dashed_border;
+  }
+  .search-submit {
+    border: none;
+  }
+}
+
+/* Category Page */

@@ -60,11 +60,9 @@
     })
       .done(function() {
         $('#quote-submission-form').slideUp(function() {
-          setTimeout(function() {
-            $('.quote-submission-wrapper').html(
-              `<p>Success! Your quote has been submited!.</p>`
-            );
-          }, 500);
+          $('.quote-submission-wrapper').html(
+            `<p>Success! Your quote has been submited!.</p>`
+          );
         });
       })
       .fail(function(error) {
