@@ -15,9 +15,8 @@
         function(data) {
           //returns the first item of the array
           const qodData = data.shift();
-
           $('.entry-content').html(qodData.content.rendered);
-          $('.entry-title').html(`&mdash; ${qodData.title.rendered}  `);
+          $('.entry-title').html(`&mdash; ${qodData.title.rendered}`);
           if (
             qodData._qod_quote_source.length &&
             qodData._qod_quote_source_url.length
@@ -41,6 +40,37 @@
       });
   });
 
+  $('#submit-quote').on('click', function(event) {
+    event.preventDefault();
+
+    $.ajax({
+      method: 'post',
+      url: qod_vars.rest_url + 'wp/v2/posts/',
+      data: {
+        title: $('#quote-author').val(),
+        content: $('#quote-content').val(),
+        _qod_quote_source: $('#quote-source').val(),
+        _qod_quote_source_url: $('#quote-source-url').val(),
+        status: 'pending'
+      },
+
+      beforeSend: function(xhr) {
+        xhr.setRequestHeader('X-WP-Nonce', qod_vars.nonce);
+      }
+    })
+      .done(function() {
+        $('#quote-submission-form').slideUp(function() {
+          setTimeout(function() {
+            $('.quote-submission-wrapper').html(
+              `<p>Success! Your quote has been submited!.</p>`
+            );
+          }, 500);
+        });
+      })
+      .fail(function(error) {
+        alert(`Opps! Something went wrong there, please try again! ${error}`);
+      });
+  });
   // 2. post a new quote using the post method
   // using a form to submit (.submit event)
   // data:

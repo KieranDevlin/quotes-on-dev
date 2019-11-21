@@ -640,8 +640,14 @@ object {
   .site .content-area .site-main {
     display: block; }
     .site .content-area .site-main .entry-content {
-      font-size: 2.25rem;
+      font-size: 1.275rem;
       font-weight: 300; }
+      @media only screen and (min-width: 620px) {
+        .site .content-area .site-main .entry-content {
+          font-size: 1.725rem; } }
+      @media only screen and (min-width: 1080px) {
+        .site .content-area .site-main .entry-content {
+          font-size: 2.625rem; } }
     .site .content-area .site-main .entry-meta {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -677,8 +683,6 @@ object {
     .site-branding .logo {
       min-width: 700px; } }
 
-/* All Archives Page */
-/* Submit a Quote Page */
 /* Footer */
 .site-footer {
   padding: 3rem 0 1.5rem;
@@ -714,12 +718,12 @@ object {
     .site-footer .menu li a {
       padding: 0 0.75rem; }
     .site-footer .menu li:after {
-      content: ' 	\007C'; }
+      content: '\007C'; }
     .site-footer .menu li:last-child:after {
       content: ''; }
     @media only screen and (min-width: 620px) {
       .site-footer .menu li:last-child:after {
-        content: ' 	\007C'; } }
+        content: '\007C'; } }
   @media only screen and (min-width: 1080px) {
     .site-footer {
       text-align: right;
@@ -750,7 +754,7 @@ object {
     font-size: 1.125rem;
     margin: 0 1.125rem 1.125rem 0; }
 
-/* Submit Quote */
+/* Submit Quote Page */
 .quote-submission-form div {
   display: -webkit-box;
   display: -ms-flexbox;

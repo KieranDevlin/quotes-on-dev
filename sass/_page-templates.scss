@@ -49,8 +49,15 @@
       display: block;
 
       .entry-content {
-        font-size: $base__space-unit * 1.5;
+        font-size: $base__space-unit * 0.85;
         font-weight: 300;
+
+        @include media($tablet) {
+          font-size: $base__space-unit * 1.15;
+        }
+        @include media($desktop) {
+          font-size: $base__space-unit * 1.75;
+        }
       }
 
       .entry-meta {
@@ -98,10 +105,6 @@
   }
 }
 
-/* All Archives Page */
-
-/* Submit a Quote Page */
-
 /* Footer */
 
 .site-footer {
@@ -127,7 +130,7 @@
         padding: 0 $base__space-unit * 0.5;
       }
       &:after {
-        content: ' 	\007C';
+        content: '\007C';
       }
       &:last-child {
         &:after {
@@ -135,7 +138,7 @@
         }
         @include media($tablet) {
           &:after {
-            content: ' 	\007C';
+            content: '\007C';
           }
         }
       }
@@ -179,7 +182,7 @@
   }
 }
 
-/* Submit Quote */
+/* Submit Quote Page */
 
 .quote-submission-form {
   div {
