@@ -741,7 +741,7 @@ object {
       padding-left: 0.75rem; } }
 
 /* About Page */
-.about .site-main p {
+.about-page .site-main p {
   font-size: 16px; }
 
 /* Page Archive */
@@ -777,13 +777,13 @@ object {
     margin: 0.75rem 0; }
 
 /* 404 Page */
-.error404 .search-submit {
+.error-page .search-submit {
   border: none;
   font-family: 'FontAwesome';
   padding: 0.45rem;
   font-weight: 700;
   line-height: 1; }
-  .error404 .search-submit:after {
+  .error-page .search-submit:after {
     content: '\f002'; }
 
 /* Search Page */
@@ -795,3 +795,5 @@ object {
   border: none; }
 
 /* Category Page */
+.category-page article {
+  border-bottom: 1px dotted #ffffff; }

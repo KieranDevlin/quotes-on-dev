@@ -9,7 +9,7 @@
 get_header(); ?>
 
 <div id="primary" class="content-area">
-	<main id="main" class="site-main category" role="main">
+	<main id="main" class="site-main category-page" role="main">
 
 		<?php if (have_posts()) : ?>
 
@@ -28,7 +28,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+			<?php qod_numbered_pagination(); ?>
 
 		<?php else : ?>
 

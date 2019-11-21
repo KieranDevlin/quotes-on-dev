@@ -157,7 +157,7 @@
 
 /* About Page */
 
-.about {
+.about-page {
   .site-main {
     p {
       font-size: $font__size;
@@ -201,7 +201,7 @@
 
 /* 404 Page */
 
-.error404 {
+.error-page {
   .search-submit {
     border: none;
     font-family: 'FontAwesome';
@@ -227,3 +227,9 @@
 }
 
 /* Category Page */
+
+.category-page {
+  article {
+    border-bottom: 1px dotted $color__dashed_border;
+  }
+}
