@@ -1,4 +1,4 @@
-### Inhabitent
+### Quotes On Dev
 
 This is the forth project in the RED Academy Web Dev program. A custom WordPress theme for Quotes On Dev - a simple random quote, post, generator with the ability to add new quotes if the user is logged in.
 
