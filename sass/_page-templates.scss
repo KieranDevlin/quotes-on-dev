@@ -164,7 +164,17 @@
     }
   }
 }
+/* Archive */
 
+.archive {
+  .page-title {
+    padding-bottom: $base__space-unit;
+    border-bottom: 1px dotted $color__dashed_border;
+  }
+  article {
+    border-bottom: 1px dotted $color__dashed_border;
+  }
+}
 /* Page Archive */
 
 .page-archive {
@@ -229,6 +239,10 @@
 /* Category Page */
 
 .category-page {
+  .page-title {
+    padding-bottom: $base__space-unit;
+    border-bottom: 1px dotted $color__dashed_border;
+  }
   article {
     border-bottom: 1px dotted $color__dashed_border;
   }

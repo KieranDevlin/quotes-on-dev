@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
+<div id="primary" class="content-area ">
 	<main id="main" class="site-main archive" role="main">
 
 		<?php if (have_posts()) : ?>
