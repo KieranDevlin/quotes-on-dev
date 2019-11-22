@@ -25,7 +25,9 @@
         });
       })
       .fail(function(error) {
-        alert(`Opps! Something went wrong there, please try again! ${error}`);
+        $('.quote-submission-wrapper').html(
+          `<p>Opps! Something went wrong there, please try again!.</p>`
+        );
       });
   });
 })(jQuery);
