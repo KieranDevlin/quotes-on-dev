@@ -66,8 +66,10 @@ function qod_scripts()
 	wp_enqueue_style('eox-google-font', 'https://fonts.googleapis.com/css?family=Exo:300,300i,400,400i&display=swap');
 	wp_enqueue_style('font-awesome', "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css", array(), '4.4.0');
 
+	// my js code
 	wp_enqueue_script('qod-get-rand-post', get_template_directory_uri() . '/build/js/get-rand-post.min.js', array('jquery'), '20191119', true);
 	wp_enqueue_script('qod-submit-new-post', get_template_directory_uri() . '/build/js/submit-new-post.min.js', array('jquery'), '20191119', true);
+
 	wp_enqueue_script('qod-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true);
 	wp_enqueue_script('qod-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true);
 
@@ -75,6 +77,7 @@ function qod_scripts()
 	$localized_scripts = array(
 		'rest_url' => esc_url_raw(rest_url()),
 		'nonce' => wp_create_nonce('wp_rest'),
+		'home_url' => home_url(),
 		'post_id' => get_the_ID(),
 		'user_id' => get_current_user_id(),
 		'success' => 'Thanks, your submission was received!',
@@ -82,10 +85,17 @@ function qod_scripts()
 	);
 
 
+	// random post generator js
 	wp_localize_script('qod-get-rand-post', 'qod_vars', $localized_scripts);
+
+	// submit new post js
 	wp_localize_script('qod-submit-new-post', 'qod_vars', $localized_scripts);
 }
 add_action('wp_enqueue_scripts', 'qod_scripts');
+
+
+
+
 
 /**
  * Custom functions that act independently of the theme templates.
