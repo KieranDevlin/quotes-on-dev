@@ -18,7 +18,11 @@
 
 
 	<!-- FAVICON -->
-	<link rel="icon" href="<?= get_stylesheet_directory_uri(); ?>/images/favicon/favicon.ico" <?php wp_head(); ?> </head> <body <?php body_class(); ?>>
+	<link rel="icon" href="<?= get_stylesheet_directory_uri(); ?>/images/favicon/favicon.ico">
+
+	<?php wp_head(); ?> </head>
+
+<body <?php body_class(); ?>>
 
 	<div id="page" class="hfeed site">
 		<a class="skip-link screen-reader-text" href="#content"><?php echo esc_html('Skip to content'); ?></a>
