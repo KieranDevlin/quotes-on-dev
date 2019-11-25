@@ -2,7 +2,7 @@
 
 This is the forth project in the RED Academy Web Dev program. A custom WordPress theme for Quotes On Dev - a simple random quote, post, generator with the ability to add new quotes if the user is logged in.
 
-![Preview Image](https://github.com/KieranDevlin/quotes-on-dev/tree/master/images/qod-readme-screenshot.png)
+![Preview Image](https://raw.githubusercontent.com/KieranDevlin/quotes-on-dev/master/images/qod-readme-screenshot.png)
 
 ## Setup
 
